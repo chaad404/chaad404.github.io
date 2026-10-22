@@ -168,7 +168,7 @@ code { font-family: var(--font-mono); font-size: .88em; background: var(--accent
 
 .intro-photo { margin: 0; }
 .intro-photo img {
-  width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 18%;
+  width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center;
   border-radius: 50%; border: 1px solid var(--rule); box-shadow: var(--shadow); background: var(--thumb-bg);
 }
 
@@ -263,7 +263,7 @@ code { font-family: var(--font-mono); font-size: .88em; background: var(--accent
 .honours span { display: block; font-size: .87rem; color: var(--muted); }
 
 /* About --------------------------------------------------------------------- */
-.about-grid { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: clamp(24px, 4vw, 44px); align-items: start; }
+.about-grid { max-width: 760px; }
 .story-lead { font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.45rem); line-height: 1.4; color: var(--ink); }
 .two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 28px; }
 
@@ -281,13 +281,6 @@ code { font-family: var(--font-mono); font-size: .88em; background: var(--accent
 .lang-list li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--rule); font-size: .93rem; }
 .lang-list span { color: var(--muted); font-size: .86rem; text-align: right; }
 .toolkit { font-size: .9rem; color: var(--muted); }
-
-.life-photo { margin: 6px 0 0; position: sticky; top: 84px; }
-.life-photo img {
-  width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 75%;
-  border-radius: var(--radius); border: 1px solid var(--rule); box-shadow: var(--shadow); background: var(--thumb-bg);
-}
-.life-photo figcaption { margin-top: 8px; font-size: .84rem; color: var(--muted); font-style: italic; }
 
 /* Footer -------------------------------------------------------------------- */
 .site-footer { border-top: 1px solid var(--rule); padding: 26px 0 34px; margin-top: 24px; font-size: .9rem; }
@@ -313,8 +306,6 @@ code { font-family: var(--font-mono); font-size: .88em; background: var(--accent
   .site-nav a:last-child { border-bottom: 0; }
 
   .project-grid { grid-template-columns: 1fr 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-  .life-photo { position: static; max-width: 340px; }
 }
 
 @media (max-width: 680px) {
@@ -339,5 +330,4 @@ code { font-family: var(--font-mono); font-size: .88em; background: var(--accent
 @media print {
   .site-header, .skip-link { display: none; }
   .item-highlight { background: none; }
-  .life-photo { position: static; }
 }
